@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：洛谷P13006 在现实和志向中选择现实，否则会一个都得不到的。</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：洛谷P13006 在现实和志向中选择现实，否则会一个都得不到的。</h1>
+		<hr/>
+		<p>此篇题解为非字符串解法，如需查看字符串解法请移步其它题解<br/>
+
+一道简单的模拟题，直接输入就好，不想用字符串就用其它变量储存标点符号，判断时不判断标点即可。<br/>
+
+下面上代码:</p>
+		<xmp>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	string a,d,b,e,c;
+	cin>>a>>d>>b>>e>>c;
+	bool flag=false;
+	if(a==b and c=="weak.")
+	{
+		flag=true;
+	}
+	if(flag==true)
+	{
+		cout<<"Plang.";
+	}
+	else
+	{
+		cout<<"Not plang.";
+	}
+	return 0;
+}
+
+		</xmp>
+		<p>洛谷发布日期为2025-06-29 17:06</p>
+		<a href="https://www.luogu.com.cn/article/jkyt39ys">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  

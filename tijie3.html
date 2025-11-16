@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：洛谷P12686 面包</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：洛谷P12686 面包</h1>
+		<hr/>
+		<p>蒟蒻第三篇题解，不喜勿喷。<br/>
+		       请勿直接复制题解</p>
+		<h2>正文开始</h2>
+		<p>题目关键在这几行:<br/>
+
+现在有N家店，每家店从当前位置出发所需的时间，以及 KOI面包到达该店还剩下的时间都会给出。如果能在面包到达该店的瞬间或更早到达店铺，就能买到KOI面包；如果在面包到达之后才到达店铺，那就已经太晚了，面包已经售罄。<br/>
+
+首先读入顾客到面包店的时间和面包到店剩下的时间并判断,如果顾客到面包店的时间小于等于面包到店剩下的时间,就可以买到KOI面包,最后判断哪一个最早即可<br/>
+
+但是要注意，题目有一个坑：<br/>
+
+对于每家店，设从当前位置到该店所需时间为A，面包到达该店还需的时间为B,则满足：<br/>
+
+0≤A≤1000<br/>
+
+0≤B≤1000<br/>
+
+所以统计可以买到KOI面包所需时间的数组不能初始化为0，得初始化为−1</p>
+		<h2>AC Code</h2>
+		<xmp>
+#include<bits/stdc++.h>
+using namespace std;
+int a[105],b[105],c[105]; //定义数组 
+int main()
+{
+	int n;	
+	cin>>n;
+	for(int i=1;i<=n;i++) //初始化可以买到KOI面包所需时间的数组 
+	{
+		c[i]=-1;
+	}
+	int num=0;//计数 
+	for(int i=1;i<=n;i++)  //读入数据 
+	{
+		cin>>a[i]>>b[i];
+	} 
+	for(int i=1;i<=n;i++)  //判断 
+	{
+		if(a[i]<=b[i])
+		{
+			c[++num]=b[i];
+		}
+	}
+	sort(c,c+num+1);  //排序 
+	if(c[1]!=-1) //判断能不能买到面包 
+	{
+		cout<<c[1]; //如果可以输出最少时间 
+	}
+	else
+	{
+		cout<<"-1"; //如果不能输出-1 
+	} 
+	return 0; 
+} 
+
+		</xmp>
+		<h2>End</h2>
+		<p>洛谷发布日期为2025-06-03 21:38</p>
+		<a href="https://www.luogu.com.cn/article/wa9blmy3">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  
