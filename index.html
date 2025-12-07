@@ -11,6 +11,21 @@
 	<body>
 		<h1>ccw_china的博客</h1>
 		<hr/>
+		<span id="csp_span"></span>
+		<script>
+			function show_csp() 
+			{
+    			window.setTimeout(show_csp, 1000);
+			let x = new Date("9/19/2026 9:30:00");
+    			let y = new Date();
+    			let t = Math.abs(y.getTime() - x.getTime());
+    			let m = 24 * 60 * 60 * 1000;
+    			let day = Math.floor(t/m);
+			csp_span.innerHTML = "距离2026 CSP-J/S第一轮还有: " + day + " 天 ";
+			}
+			show_csp();
+		</script>
+		<hr/>
 		<h1>个人简介</h1>
 		<p>我是一名爱编程的初中生,会图形化,Python,C++这三种编程语言，在爱发电，哔哩哔哩，洛谷，CSDN等平台都有账号，账号名为ccw_china，平常爱用C++做一些简单的小游戏，小工具，在哔哩哔哩上发布了许多有趣的视频，爱好编程，骑自行车和文学创作，有几部小作品，有自己的小自行车队，多次获得大小编程比赛奖项，联系我可以发邮件至ccw_china2012@163.com,也可以去各大平台私信我！</p>
 		<h1>链接跳转</h1>
@@ -31,9 +46,11 @@
 		<br/>
 		<a href="tijie4.html">题解：洛谷P13006 在现实和志向中选择现实，否则会一个都得不到的。</a>
 		<br/>
+		<a href="tijie5.html">题解：P1012 [NOIP 1998 提高组] 拼数</a>
+		<br/>
 		<h2>此网站其它内容正在施工........敬请期待</h2>
 		<hr/>
-		<h6>本网站创建于2025/11/1,最后更新于2025/11/23</h6>
+		<h6>本网站创建于2025/11/1,最后更新于2025/12/7</h6>
 		<a href=mailto:ccw_china2012@163.com>站长邮箱</a>	
 		<br/>
 		<span id="runtime_span"></span>
@@ -67,6 +84,7 @@
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
+			background-color: rgba(0, 0, 0, 0.5);
 			}
 		</style>
 	</body>

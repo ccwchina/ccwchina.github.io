@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：P1012 [NOIP 1998 提高组] 拼数</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：P1012 [NOIP 1998 提高组] 拼数</h1>
+		<hr/>
+		<h2>题意简化</h2>
+		<p>给定 n 个数，将它们打乱顺序拼接，求拼接出最大的数字</p>
+		<h2>思路</h2>
+		<p>将每个数字以字符串形式存进数组，分别将其和其它数字拼接起来比较大小，最后输出即可</p>
+		<h2>代码<h2/>
+		<xmp>
+		#include<bits/stdc++.h>
+		using namespace std;
+		int n;
+		string str[21];
+		bool cmp(string a,string b)
+		{
+			return a+b>b+a;
+		}
+		int main()
+		{
+			cin>>n;
+			for(int i=0;i<n;i++)
+			{
+				cin>>str[i];
+			}
+			sort(str,str+n,cmp);
+			for(int i=0;i<n;i++)
+			{
+				cout<<str[i];
+			}
+			return 0;
+		}
+		</xmp>
+		<h6>严禁抄袭题解</h6>
+		<p>洛谷发布日期为2025-11-16 09:15</p>
+		<a href="https://www.luogu.com.cn/article/3xuwb5j4">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  
