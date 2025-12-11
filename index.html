@@ -12,32 +12,37 @@
 		  box-sizing: border-box;
 		}
  
-		body {
-		  font-family: Arial;
-		  padding: 10px;
- 		 background: #f1f1f1;
-		 border-radius: 25px;
+		.body
+		{
+		    font-family: Arial;
+		    padding: 10px;
+ 		    background: #f1f1f1;
+		    border-radius: 25px;
 		}
  
-		.header {
+		.header 
+		{
 		  padding: 30px;
 		  text-align: center;
 		  background: white;
 		  border-radius: 25px;
 		}
  
-		.header h1 {
+		.header h1 
+		{
 		  font-size: 50px;
 		}
  
 
-		.topnav {
+		.topnav 
+		{
 		  overflow: hidden;
 		  background-color: #333;
 		}
  
 
-		.topnav a {
+		.topnav a 
+		{
 		  float: left;
 		  display: block;
 		  color: #f2f2f2;
@@ -46,31 +51,36 @@
 		  text-decoration: none;
 		}
 			
-		.topnav a:hover {
+		.topnav a:hover 
+		{
 		  background-color: #ddd;
 		  color: black;
 		}
  
-		.leftcolumn {   
+		.leftcolumn 
+		{   
 		  float: left;
 		  width: 75%;
 		}
  
 
-		.rightcolumn {
+		.rightcolumn 
+		{
 		  float: left;
 		  width: 25%;
 		  background-color: #f1f1f1;
 		  padding-left: 20px;
 		}
  
-		.fakeimg {
+		.fakeimg 
+		{
 		  background-color: #aaa;
 		  width: 100%;
 		  padding: 20px;
 		}
 			
-		.card {
+		.card 
+		{
 		  background-color: white;
 		  padding: 20px;
 		  margin-top: 20px;
@@ -78,13 +88,15 @@
 		 border-radius: 25px;
 		}
  
-		.row:after {
+		.row:after 
+		{
 		  content: "";
 		  display: table;
 		  clear: both;
 		}
  
-		.footer {
+		.footer 
+		{
 		  padding: 20px;
 		  text-align: center;
 		  background: #ddd;
@@ -92,26 +104,29 @@
 		  border-radius: 25px;
 		}
 
-		@media screen and (max-width: 800px) {
-		  .leftcolumn, .rightcolumn {   
+		@media screen and (max-width: 800px) 
+		{
+		  .leftcolumn, .rightcolumn 
+		  {   
 		    width: 100%;
 		    padding: 0;
 		  }
 		}
 
-		@media screen and (max-width: 400px) {
- 		 .topnav a {
- 		   float: none;
-  		  width: 100%;
- 		 }
+		@media screen and (max-width: 400px) 
+		{
+ 		 	.topnav a 
+		 	{
+ 		   		float: none;
+  		  		width: 100%;
+ 		 	}
 		}
 		</style>
 	</head>
 	<body>
 		<div class="header">
-			<h1>ccw_china的博客</h1>
+			<a name="sy"><h1>ccw_china的博客</h1></a>
 		</div>
-		<hr/>
 		<span id="csp_span"></span>
 		<script>
 			function show_csp() 
@@ -126,84 +141,90 @@
 			}
 			show_csp();
 		</script>
-		<hr/>
-		<div class="card">
-		<h1>个人简介</h1>
-		<p>我是一名爱编程的初中生,会图形化,Python,C++这三种编程语言，在爱发电，哔哩哔哩，洛谷，CSDN等平台都有账号，账号名为ccw_china，平常爱用C++做一些简单的小游戏，小工具，在哔哩哔哩上发布了许多有趣的视频，爱好编程，骑自行车和文学创作，有几部小作品，有自己的小自行车队，多次获得大小编程比赛奖项，联系我可以发邮件至ccw_china2012@163.com,也可以去各大平台私信我！</p>
+		<div class="topnav">
+			<a href="#sy">首页</a>
+			<a href="#jj">个人简介</a>
+			<a href="#lj">链接跳转</a>
+			<a href="#wz">文章/专栏</a>
 		</div>
-		<h1>链接跳转</h1>
-      	<div class="topnav">
-		<a href="https://www.luogu.com.cn/user/1471458">洛谷主页</a>
-		<a href="https://space.bilibili.com/3493128944224845?spm_id_from=333.1007.0.0">B站主页</a>
-		<a href="https://afdian.com/a/ccw_china">爱发电主页</a>
-		<a href="https://blog.csdn.net/ccw_china?spm=1000.2115.3001.5343">CSDN主页</a>
-		<a href="https://github.com/ccwchina">Github主页</a>
-		<a href="https://www.ccw.site/student/626e942d159cf5590308cea0">共创世界主页</a>
-        </div>
-		<h1>文章/专栏</h1>
-      	<div class="card">
-			<img src="code.png" style="height:200px;" />
-			<a href="article1.html">小说-人性</a>
+		<div class="body">
+			<a name="jj"><h1>个人简介</h1></a>
+			<div class="card">
+				<p>我是一名爱编程的初中生,会图形化,Python,C++这三种编程语言，在爱发电，哔哩哔哩，洛谷，CSDN等平台都有账号，账号名为ccw_china，平常爱用C++做一些简单的小游戏，小工具，在哔哩哔哩上发布了许多有趣的视频，爱好编程，骑自行车和文学创作，有几部小作品，有自己的小自行车队，多次获得大小编程比赛奖项，联系我可以发邮件至ccw_china2012@163.com,也可以去各大平台私信我！</p>
+			</div>
+			<a name="lj"><h1>链接跳转</h1></a>
+      		<div class="card">
+				<a href="https://www.luogu.com.cn/user/1471458">洛谷主页</a>
+				<a href="https://space.bilibili.com/3493128944224845?spm_id_from=333.1007.0.0">B站主页</a>
+				<a href="https://afdian.com/a/ccw_china">爱发电主页</a>
+				<a href="https://blog.csdn.net/ccw_china?spm=1000.2115.3001.5343">CSDN主页</a>
+				<a href="https://github.com/ccwchina">Github主页</a>
+				<a href="https://www.ccw.site/student/626e942d159cf5590308cea0">共创世界主页</a>
+        	</div>
+			<a name="wz"><h1>文章/专栏</h1></a>
+      		<div class="card">
+				<img src="code.png" style="height:200px;" />
+				<a href="article1.html">小说-人性</a>
+			</div>
+			<div class="card">
+				<img src="code.png" style="height:200px;" />
+				<a href="tijie.html">题解：洛谷P12641 上学</a>
+			</div>
+			<div class="card">
+				<img src="code.png" style="height:200px;" />
+				<a href="tijie2.html">题解：洛谷P5728 旗鼓相当的对手</a>
+			</div>
+			<div class="card">
+				<img src="code.png" style="height:200px;" />
+        		<a href="tijie3.html">题解：洛谷P12686 面包</a>
+			</div>
+			<div class="card">
+				<img src="code.png" style="height:200px;" />
+				<a href="tijie4.html">题解：洛谷P13006 在现实和志向中选择现实，否则会一个都得不到的。</a>
+			</div>
+			<div class="card">
+				<img src="code.png" style="height:200px;" />
+        		<a href="tijie5.html">题解：P1012 [NOIP 1998 提高组] 拼数</a>
+        	</div>
 		</div>
-		<div class="card">
-			<img src="code.png" style="height:200px;" />
-			<a href="tijie.html">题解：洛谷P12641 上学</a>
-		</div>
-		<div class="card">
-			<img src="code.png" style="height:200px;" />
-			<a href="tijie2.html">题解：洛谷P5728 旗鼓相当的对手</a>
-		</div>
-		<div class="card">
-			<img src="code.png" style="height:200px;" />
-        	<a href="tijie3.html">题解：洛谷P12686 面包</a>
-		</div>
-		<div class="card">
-			<img src="code.png" style="height:200px;" />
-			<a href="tijie4.html">题解：洛谷P13006 在现实和志向中选择现实，否则会一个都得不到的。</a>
-		</div>
-		<div class="card">
-			<img src="code.png" style="height:200px;" />
-        	<a href="tijie5.html">题解：P1012 [NOIP 1998 提高组] 拼数</a>
-        </div>
 		<div class="footer">
-		<hr/>
-		<h6>本网站创建于2025/11/1,最后更新于2025/12/8</h6>
-		<a href=mailto:ccw_china2012@163.com>站长邮箱</a>	
-		<br/>
-		<span id="runtime_span"></span>
-		<script>
-			function show_runtime() 
-			{
-    			window.setTimeout(show_runtime, 1000);
-    			let X = new Date("11/1/2025 20:00:00");
-    			let Y = new Date();
-    			let T = (Y.getTime() - X.getTime());
-    			let M = 24 * 60 * 60 * 1000;
-    			let days = Math.floor(T / M);
-    			let hours = Math.floor((T % M) / (60 * 60 * 1000));
-    			let minutes = Math.floor((T % (60 * 60 * 1000)) / (60 * 1000));
-    			let seconds = Math.floor((T % (60 * 1000)) / 1000);
-    			let runtime_span = document.getElementById('runtime_span');
-    			runtime_span.innerHTML = "本站已稳定运行: " + days + " 天 " + hours + " 小时 " + minutes + " 分 " + seconds + " 秒";
-			}
-			show_runtime();
-		</script>
-		<p>网站累计访问人次:</p>
-		<div style="display: flex; justify-content: center; align-items: center;">
+			<h6>本网站创建于2025/11/1,最后更新于2025/12/8</h6>
+			<a href=mailto:ccw_china2012@163.com>站长邮箱</a>	
+			<br/>
+			<span id="runtime_span"></span>
+			<script>
+				function show_runtime() 
+				{
+    				window.setTimeout(show_runtime, 1000);
+    				let X = new Date("11/1/2025 20:00:00");
+    				let Y = new Date();
+    				let T = (Y.getTime() - X.getTime());
+    				let M = 24 * 60 * 60 * 1000;
+    				let days = Math.floor(T / M);
+    				let hours = Math.floor((T % M) / (60 * 60 * 1000));
+    				let minutes = Math.floor((T % (60 * 60 * 1000)) / (60 * 1000));
+    				let seconds = Math.floor((T % (60 * 1000)) / 1000);
+    				let runtime_span = document.getElementById('runtime_span');
+    				runtime_span.innerHTML = "本站已稳定运行: " + days + " 天 " + hours + " 小时 " + minutes + " 分 " + seconds + " 秒";
+				}
+				show_runtime();
+			</script>
+			<p>网站累计访问人次:</p>
+			<div style="display: flex; justify-content: center; align-items: center;">
     			<img src="https://count.getloli.com/@ccwchina" alt="ccwchina" />
-		</div>
-		<br/>
-		<a href="https://icp.gov.moe/?keyword=20257801" target="_blank">萌ICP备20257801号</a>
-		<style>
-			body
-			{
-			background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/85e92vzy.png');
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			background-color: rgba(0, 0, 0, 0.5);
-			}
-		</style>
+			</div>
+			<br/>
+			<a href="https://icp.gov.moe/?keyword=20257801" target="_blank">萌ICP备20257801号</a>
+			<style>
+				body
+				{
+					background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/85e92vzy.png');
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-size: cover;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			</style>
 		</div>
 	</body>
 </html>
