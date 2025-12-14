@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：P14495 [NCPC 2025] Arithmetic Adaptation</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：P14495 [NCPC 2025] Arithmetic Adaptation</h1>
+		<hr/>
+		<p>一道模拟题，按照题意枚举即可，但是要注意判断a和b是否为0，题目规定了a和b不能为0。</p>
+		<br/>
+		<p>代码如下:</p>
+		<xmp>
+		#include<bits/stdc++.h>
+		using namespace std;
+		int main()
+		{
+		    int s;
+		    cin>>s;
+		    for(int i=-999;i<=999;i++)
+		    {
+		        for(int j=-999;j<=999;j++)
+		        {
+		            if(i+j==s and i!=0 and j!=0)
+		            {
+		                cout<<i<<" "<<j;
+		                return 0;
+		            }
+		        }
+		    }
+		}
+		</xmp>
+		<p>洛谷发布日期为2025-11-13 21:49</p>
+		<a href="https://www.luogu.com.cn/article/m69pqp7l">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  

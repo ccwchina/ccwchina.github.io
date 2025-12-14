@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：AT_joi2024_yo1c_b 桁 (Digit)</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：AT_joi2024_yo1c_b 桁 (Digit)</h1>
+		<hr/>
+		<h2>思路</h2>
+		<p>题目要我们求 A 与 B 的和在十进制下的位数，我们需要先求出 A 与 B 的和，然后对和不断进行除以 10 的操作，这样可以删掉和的最后一位，举个例子：
+
+假设 A 与 B 的和是 123，
+
+123 除以 10 会得到 12，
+
+12 再除以 10 会得到 1，
+
+1 再除以 10 会得到 0，
+
+此时跳出循环。
+
+再设置一个计数器，循环过程中每次除以 10 的操作进行完毕后将计数器增加 1，最后输出即可。</p>
+		<h2>代码</h2>
+		<xmp>
+#include<iostream>
+using namespace std;
+int main()
+  {
+    int a,b;
+    cin>>a>>b;
+    a+=b;
+    int ans=0;
+    while(a!=0)
+    {
+        a/=10;
+        ans++;
+    }
+    cout<<ans;
+    return 0;
+}
+		</xmp>
+		<p>洛谷发布日期为2025-12-14 12:25</p>
+		<a href="https://www.luogu.com.cn/article/chsszsf6">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  
