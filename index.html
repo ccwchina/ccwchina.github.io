@@ -17,7 +17,7 @@
 		    font-family: Arial;
 		    padding: 10px;
  		    background: #f1f1f1;
-		    border-radius: 25px;
+		    /*border-radius: 25px;*/
 		}
  
 		.header 
@@ -25,7 +25,7 @@
 		  padding: 30px;
 		  text-align: center;
 		  background: white;
-		  border-radius: 25px;
+		  /*border-radius: 25px;*/
 		}
  
 		.header h1 
@@ -85,7 +85,7 @@
 		  padding: 20px;
 		  margin-top: 20px;
 		  /*background-image: url('code.png');*/
-		 border-radius: 25px;
+		 /*border-radius: 25px;*/
 		}
  
 		.row:after 
@@ -100,8 +100,8 @@
 		  padding: 20px;
 		  text-align: center;
 		  background: #ddd;
-		  margin-top: 20px;
-		  border-radius: 25px;
+		  /*margin-top: 20px;*/
+		  /*border-radius: 25px;*/
 		}
 
 		@media screen and (max-width: 800px) 
@@ -126,21 +126,8 @@
 	<body>
 		<div class="header">
 			<a name="sy"><h1>ccw_china的博客</h1></a>
+			<p>爱编程的初中生，热爱生活，热爱编程</p>
 		</div>
-		<span id="csp_span"></span>
-		<script>
-			function show_csp() 
-			{
-    			window.setTimeout(show_csp, 1000);
-			let x = new Date("9/19/2026 9:30:00");
-    			let y = new Date();
-    			let t = Math.abs(y.getTime() - x.getTime());
-    			let m = 24 * 60 * 60 * 1000;
-    			let day = Math.floor(t/m);
-			csp_span.innerHTML = "距离2026 CSP-J/S第一轮还有: " + day + " 天 ";
-			}
-			show_csp();
-		</script>
 		<div class="topnav">
 			<a href="#sy">首页</a>
 			<a href="#jj">个人简介</a>
@@ -148,6 +135,20 @@
 			<a href="#wz">文章/专栏</a>
 		</div>
 		<div class="body">
+			<span id="csp_span"></span>
+			<script>
+				function show_csp() 
+				{
+    				window.setTimeout(show_csp, 1000);
+					let x = new Date("9/19/2026 9:30:00");
+    				let y = new Date();
+    				let t = Math.abs(y.getTime() - x.getTime());
+    				let m = 24 * 60 * 60 * 1000;
+    				let day = Math.floor(t/m);
+				csp_span.innerHTML = "距离2026 CSP-J/S第一轮还有: " + day + " 天 ";
+				}
+				show_csp();
+			</script>
 			<a name="jj"><h1>个人简介</h1></a>
 			<div class="card">
 				<p>我是一名爱编程的初中生,会图形化,Python,C++这三种编程语言，在爱发电，哔哩哔哩，洛谷，CSDN等平台都有账号，账号名为ccw_china，平常爱用C++做一些简单的小游戏，小工具，在哔哩哔哩上发布了许多有趣的视频，爱好编程，骑自行车和文学创作，有几部小作品，有自己的小自行车队，多次获得大小编程比赛奖项，联系我可以发邮件至ccw_china2012@163.com,也可以去各大平台私信我！</p>
@@ -160,10 +161,10 @@
 				<a href="https://blog.csdn.net/ccw_china?spm=1000.2115.3001.5343">CSDN主页</a>
 				<a href="https://github.com/ccwchina">Github主页</a>
 				<a href="https://www.ccw.site/student/626e942d159cf5590308cea0">共创世界主页</a>
-        	</div>
+        		</div>
 			<a name="wz"><h1>文章/专栏</h1></a>
       		<div class="card">
-				<img src="code.png" style="height:200px;" />
+				<img src="book.jpg" style="height:200px;" />
 				<a href="article1.html">小说-人性</a>
 			</div>
 			<div class="card">
