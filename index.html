@@ -7,7 +7,25 @@
 		<meta name="keywords" content="ccw_china的博客">
 		<meta name="description" content="ccw_china的博客">
 		<meta name="author" content="ccw_china">
+		<script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
 		<style>
+		.auth-box 
+		{
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        button 
+		{
+            pad
+			ding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #user-info 
+		{
+            display: none;
+        }
 		* {
 		  box-sizing: border-box;
 		}
@@ -112,6 +130,68 @@
 			<a name="sy"><h1>ccw_china的博客</h1></a>
 			<p>爱编程的初中生，热爱生活，热爱编程</p>
 		</div>
+			<div class="auth-box">
+        	<div id="login-area">
+            	<button id="login-btn">登录/注册</button>
+        	</div>
+        	<div id="user-info">
+            	<h2>欢迎回来！</h2>
+            	<p id="nickname"></p>
+            	<p id="email"></p>
+            	<button id="logout-btn">登出</button>
+        	</div>
+    	</div>
+    	<script>
+        	const auth0 = await createAuth0Client({
+            	domain: "dev-tl0efdcaq3kmvysk.us.auth0.com", 
+            	clientId: "hKKgWsNp051fCTb7auSXLLqdB5iGPJHX",
+            	authorizationParams: 
+				{
+                	redirect_uri: window.location.origin 
+            	}
+        	});
+        	const isAuthenticated = await auth0.isAuthenticated();
+        	if (isAuthenticated) 
+			{
+            	showUserInfo(); 
+        	} 
+			else 
+			{
+            	const query = window.location.search;
+            	if (query.includes("code=") && query.includes("state=")) 
+				{
+                	await auth0.handleRedirectCallback();
+                	window.history.replaceState({}, document.title, "/");
+                	showUserInfo();
+            	}
+        	}
+        	document.getElementById("login-btn").addEventListener("click", async () => {
+            	await auth0.loginWithRedirect(); 
+				
+        	});
+        	document.getElementById("logout-btn").addEventListener("click", async () => {
+            	await auth0.logout({
+                	logoutParams: 
+					{
+                    	returnTo: window.location.origin
+                	}
+            	});
+            	hideUserInfo(); 
+        	});
+        	async function showUserInfo() 
+			{
+            	const user = await auth0.getUser(); 
+            	document.getElementById("nickname").textContent = `昵称：${user.name || "未知用户"}`;
+            	document.getElementById("email").textContent = `邮箱：${user.email || "未绑定邮箱"}`;
+            	document.getElementById("login-area").style.display = "none";
+            	document.getElementById("user-info").style.display = "block";
+        	}
+        	function hideUserInfo() 
+			{
+           	 	document.getElementById("user-info").style.display = "none";
+            	document.getElementById("login-area").style.display = "block";
+        	}
+    	</script>
 		<div class="topnav">
 			<a href="#sy">首页</a>
 			<a href="#jj">个人简介</a>
