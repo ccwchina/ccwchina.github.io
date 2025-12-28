@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title>题解：AT_joi2023_yo1b_c 繰り返し文字列 (Repeating String)</title>
+		<link rel="shortcut icon" href="image.png" type="image/x-icon">
+	</head>
+	<body>
+		<h1>题解：AT_joi2023_yo1b_c 繰り返し文字列 (Repeating String)</h1>
+		<hr/>
+		<h2>思路</h2>
+		<p>这道题可以枚举，从中间分割，从第 1 个字符和第 N/2+1 开始比较，比较到第 N/2 个字符和第 N个字符，比较的过程中如果发现有不同的直接输出 No，结束程序，否则执行到最后输出 Yes。</p>
+		<h2>代码</h2>
+		<xmp>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    for(int i=0;i<n/2;i++)
+    {
+        if(s[i]!=s[i+n/2])
+        {
+            cout<<"No";
+            return 0;
+        }
+    }
+    cout<<"Yes";
+    return 0;
+}
+
+		</xmp>
+		<p>洛谷发布日期为2025-12-16 22:07</p>
+		<a href="https://www.luogu.com.cn/article/rck6ctbh">原文链接</a>
+		<a href="https://ccwchina.github.io">返回主页</a>
+	</body>
+</html>
+   
+   
+    
+   
+
+   
+  
+                                                  
